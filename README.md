@@ -68,5 +68,5 @@ This Django project provides a secure and user-friendly web interface for encryp
 
 
 ### Author:
-- **[Ilhaam Ismail Soomro]** - [GitHub Profile](https://github.com/ilhaamsoomro)
+- **Ilhaam Ismail Soomro** - [GitHub Profile](https://github.com/ilhaamsoomro)
 
