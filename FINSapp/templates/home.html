@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FINS Cipher</title>
+    <style>
+        /* Add your CSS styles here */
+         body {
+            background-color: #000; /* Dark background matching the form input boxes */
+            font-family: 'VT323', monospace; /* Preserve font styles */} 
+
+       /* .Screen {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 5;
+        background-color: rgba(0,0,0,0.15);
+        animation: ScreenEffect 0.05s ease infinite;
+        cursor: pointer;
+        } */
+
+        @keyframes ScreenEffect {
+        0% { opacity: 0 }
+        50% { opacity: 1 }
+        100% { opacity: 0 }
+        }
+
+        .Pulse {
+        animation: Pulse 1.5s ease infinite;
+        }
+
+        @keyframes Pulse {
+        0% { opacity: 0 }
+        50% { opacity: 1 }
+        100% { opacity: 0 }
+        }
+
+        .DivClass {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: #000;
+        padding: 5% 5% 5% 5%;
+        }
+
+        .MatrixTextEffect {
+        color: rgba(125,225,125,0.75);
+        font-family: 'VT323', monospace;
+        font-size: 25px;
+        text-shadow: 0 0 5px rgba(125,225,125,0.5), 0 0 15px rgba(125,250,125,1);
+        }
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+        
+                /* Add this CSS to style the form elements */
+        /* Add this CSS to style only the form input boxes */
+        form input[type="text"], form input[type="password"], form select {
+            background-color: #000; /* Black background */
+            border: 2px solid rgba(125,225,125,0.75); /* Neon green outline */
+            color: rgba(125,225,125,0.75); /* Neon green text color */
+            padding: 8px; /* Add some padding for better appearance */
+            border-radius: 5px; /* Rounded corners */
+            margin-bottom: 10px; /* Add some space between elements */
+        }
+
+        form input[type="text"]:focus, form input[type="password"]:focus, form select:focus {
+            outline: none; /* Remove default focus outline */
+            border-color: rgba(125,225,125,1); /* Brighter neon green on focus */
+        }
+
+        /* Adjust the appearance of the submit button */
+        form input[type="submit"] {
+            background-color: #000; /* Black background */
+            border: 2px solid rgba(125,225,125,0.75); /* Neon green outline */
+            color: rgba(125,225,125,0.75); /* Neon green text color */
+            padding: 10px 20px; /* Add padding for better appearance */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        form input[type="submit"]:hover {
+            background-color: rgba(125,225,125,0.5); /* Lighter green on hover */
+        }
+
+
+
+        /* Add more CSS for styling form elements */
+    </style>
+</head>
+<body>
+    <div class="Screen"></div>
+        <div class="DivClass">
+        <span class="MatrixTextEffect">
+
+       
+        <span class="Pulse"></span>
+            <h1>FINS Cipher</h1>
+            <form method="post">
+                {% csrf_token %}
+                <label for="text">Text to Process:</label><br>
+                <input type="text" id="text" name="text"><br>
+                <label for="key">Key:</label><br>
+                <input type="text" id="passphrase" name="passphrase"><br>
+                <label for="operation">Choose Operation:</label><br>
+                <select id="operation" name="operation">
+                    <option value="encryption">Encryption</option>
+                    <option value="decryption">Decryption</option>
+                </select><br>
+                <input type="submit" value="Submit">
+            </form>
+</div>
+
+</body>
+</html>

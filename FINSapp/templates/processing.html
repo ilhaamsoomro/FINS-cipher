@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacking Animation</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #0f0; /* Bright green text */
+            font-family: 'Courier New', Courier, monospace;
+            overflow: hidden; /* Hide scrollbar */
+            margin: 0;
+            padding: 0;
+        }
+
+        .terminal {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            white-space: pre-wrap; /* Preserve newline */
+            font-size: 20px;
+            animation: typing 3s steps(40) infinite;
+            border-right: 2px solid #0f0; /* Blinking cursor */
+            padding-right: 10px; /* Space for cursor */
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="terminal">
+    </div>
+    <div class="terminal">
+        Encryption Process Initiated...
+    </div>
+    <script>
+        // JavaScript for dynamic effects
+        const terminalText = document.querySelector('.terminal');
+        
+        // Change text dynamically
+        setInterval(() => {
+            terminalText.textContent = generateRandomText();
+        }, 3000);
+        
+        // Function to generate random text
+        function generateRandomText() {
+            const characters = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:,.<>?';
+            let randomText = '';
+            const textLength = Math.floor(Math.random() * 50) + 1; // Random text length
+            
+            for (let i = 0; i < textLength; i++) {
+                randomText += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+
+            return randomText;
+        }
+        </script>
+
+</body>
+</html>

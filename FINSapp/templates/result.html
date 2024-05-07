@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Result</title>
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Bubble+Font&display=swap">
+        <style>
+            /* Add your CSS styles here */
+        body {
+            font-family: 'VT323', monospace;
+            background-color: #000;        }
+
+        @keyframes ScreenEffect {
+        0% { opacity: 0 }
+        50% { opacity: 1 }
+        100% { opacity: 0 }
+        }
+
+        .Pulse {
+        animation: Pulse 1.5s ease infinite;
+        }
+
+        @keyframes Pulse {
+        0% { opacity: 0 }
+        50% { opacity: 1 }
+        100% { opacity: 0 }
+        }
+
+        .DivClass {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: #000;
+        padding: 5% 5% 5% 5%;
+        }
+
+        .MatrixTextEffect {
+        color: rgba(125,225,125,0.75);
+        font-family: 'VT323', monospace;
+        font-size: 25px;
+        text-shadow: 0 0 5px rgba(125,225,125,0.5), 0 0 15px rgba(125,250,125,1);
+        margin-top: -200px;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+
+    </style>
+</head>
+<body>
+    <div class="Screen"></div>
+        <div class="DivClass">
+        <span class="MatrixTextEffect">
+    <h1>Result:</h1>
+    <p>{{ result }}</p>
+</body>
+</html>
