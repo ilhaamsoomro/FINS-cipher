@@ -45,6 +45,23 @@
         }
         @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
+        .button {
+            display: inline-block;
+            background-color: #000; /* Black background */
+            border: 2px solid rgba(125,225,125,0.75); /* Neon green outline */
+            color: rgba(125,225,125,0.75); /* Neon green text color */
+            padding: 10px 20px; /* Add padding for better appearance */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+            text-decoration: none; /* Remove default underline */
+        }
+
+        /* Hover effect for button */
+        .button:hover {
+            background-color: rgba(125,225,125,0.5); /* Lighter green on hover */
+        }
+
 
     </style>
 </head>
@@ -52,7 +69,8 @@
     <div class="Screen"></div>
         <div class="DivClass">
         <span class="MatrixTextEffect">
-    <h1>Result:</h1>
-    <p>{{ result }}</p>
+            <h1>Result:</h1>
+            <p>{{ result }}</p>
+            <a href = "http://127.0.0.1:8000/" class="button"> Back </a>
 </body>
 </html>
